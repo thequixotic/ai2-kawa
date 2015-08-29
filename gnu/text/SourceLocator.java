@@ -1,13 +1,17 @@
 package gnu.text;
 
+/**
+ * @MIT : The preprocessor code have been commented/uncommented to force compatible code. Preprocessing has been done manually.
+ */
+
 public interface SourceLocator
-  /* #ifdef SAX2 */
+  /* ifdef SAX2 */
   extends
-  /* #ifdef use:javax.xml.transform */
-  javax.xml.transform.SourceLocator, 
-  /* #endif */
+  /* ifdef use:javax.xml.transform */
+ // javax.xml.transform.SourceLocator,
+  /* endif */
   org.xml.sax.Locator
-  /* #endif */
+  /* endif */
 {
   /** Return current column number.
    * The "first" column is column 1; unknown is -1. */
